@@ -1,0 +1,22 @@
+.mat-toolbar {
+  height: 64px;
+}
+
+.title-text {
+  margin-left:16px;
+
+  font-size: 32px;
+}
+
+.mat-sidenav-container {
+  width: 100%;
+
+  position: absolute;
+  top: 64px;
+  left: 0px;
+  bottom: 0px;
+}
+
+.mat-sidenav {
+  width:256px;
+}
