@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
 
 /* angular material */
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -10,15 +11,22 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatExpansionModule} from '@angular/material/expansion';
 
-import { AppRoutingModule } from './app-routing.module';
+/* firebase */
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
+
+/* conponents */
 import { AppComponent } from './app.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidenavComponent
+    SidenavComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +39,11 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     MatListModule,
     MatIconModule,
     MatButtonModule,
-    MatExpansionModule
+    MatExpansionModule,
+
+    //firebase
+    AngularFireModule.initializeApp(environment.firebase),
+ 	  AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

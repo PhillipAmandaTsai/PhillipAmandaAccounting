@@ -1,0 +1,9 @@
+<div class="my-square-buttons">
+  <button
+    *ngFor="let input of login_inputs"
+    [value]="input"
+    mat-raised-button 
+    class="my-square-button">
+    {{input}}
+  </button>
+</div>

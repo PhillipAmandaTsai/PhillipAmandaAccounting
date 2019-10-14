@@ -1,0 +1,11 @@
+.my-square-buttons{
+  width:288px;
+  margin:auto;
+}
+
+.my-square-button{
+  height:64px;
+  width:64px;
+  margin:4px;
+  font-size:16px;
+}
